@@ -23,7 +23,7 @@ export const journalPosts: JournalPost[] = [
     sections: [
       { heading: "Start with the nursery pot", body: "Measure the diameter of the plastic nursery pot your plant currently lives in. For most houseplants, move up by just 2–4 cm. This gives new roots space without leaving so much wet compost that they struggle to breathe." },
       { heading: "Think about the silhouette", body: "Upright plants feel grounded in taller cylinders, while broad or trailing plants suit lower, wider forms. The practical fit comes first, but proportion is what makes the pairing feel intentional." },
-      { heading: "Keep the liner", body: "Every Terra pairing keeps the plant in a removable nursery liner. You can lift it out to water and drain, then return it to the decorative pot—cleaner for shelves and kinder to roots." },
+      { heading: "Keep the liner", body: "Every Luna pairing keeps the plant in a removable nursery liner. You can lift it out to water and drain, then return it to the decorative pot—cleaner for shelves and kinder to roots." },
     ],
   },
   {
@@ -42,14 +42,14 @@ export const journalPosts: JournalPost[] = [
     ],
   },
   {
-    slug: "inside-the-terra-studio",
-    title: "Inside the Terra studio",
+    slug: "inside-the-luna-studio",
+    title: "Inside the Luna studio",
     excerpt: "From a line on screen to a finished planter: an afternoon with our small print farm.",
     category: "Studio visit",
     date: "18 July 2026",
     readTime: "6 min read",
     tone: "chalk",
-    intro: "Our studio is part workshop, part greenhouse. Printers hum along one wall, while test plants gather near the brightest windows. The two sides of Terra are always in conversation.",
+    intro: "Our studio is part workshop, part greenhouse. Printers hum along one wall, while test plants gather near the brightest windows. The two sides of Luna are always in conversation.",
     sections: [
       { heading: "A digital wheel", body: "Each form begins as a profile and a set of constraints: root space, liner size, strength and the way light should meet the surface. We refine digitally, then learn from the first physical print." },
       { heading: "The finishing bench", body: "Finished pots are checked by hand, cleaned and paired with a snug liner. Small variations in the printed grain are normal and part of the object’s character." },

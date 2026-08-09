@@ -20,21 +20,21 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(origin),
-    title: { default: "Terra — Rooted in Design", template: "%s | Terra" },
+    title: { default: "Luna — Rooted in Design", template: "%s | Luna" },
     description: "Modern 3D-printed pots, paired with characterful plants and made to order in the UK.",
-    applicationName: "Terra",
+    applicationName: "Luna",
     keywords: ["3D printed plant pots", "plant pots UK", "indoor plants with pots", "modern planters", "houseplants UK"],
     openGraph: {
       type: "website",
       locale: "en_GB",
-      siteName: "Terra",
-      title: "Terra — Rooted in Design",
+      siteName: "Luna",
+      title: "Luna — Rooted in Design",
       description: "Living plants and sculptural 3D-printed pots, paired and made to order in the UK.",
-      images: [{ url: socialImage, width: 1200, height: 630, alt: "Terra — plants paired with 3D-printed pots" }],
+      images: [{ url: socialImage, width: 1200, height: 630, alt: "Luna — plants paired with 3D-printed pots" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Terra — Rooted in Design",
+      title: "Luna — Rooted in Design",
       description: "Living plants and sculptural 3D-printed pots, paired and made to order in the UK.",
       images: [socialImage],
     },

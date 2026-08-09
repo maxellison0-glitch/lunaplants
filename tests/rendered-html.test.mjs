@@ -15,7 +15,7 @@ async function render(path = "/") {
   );
 }
 
-test("server-renders the Terra homepage", async () => {
+test("server-renders the Luna homepage", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);

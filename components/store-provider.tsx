@@ -45,10 +45,10 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const syncSavedCart = () => {
       try {
-        const saved = window.localStorage.getItem("terra-cart");
+        const saved = window.localStorage.getItem("luna-cart");
         if (saved) setItems(JSON.parse(saved) as CartItem[]);
       } catch {
-        window.localStorage.removeItem("terra-cart");
+        window.localStorage.removeItem("luna-cart");
       } finally {
         setHydrated(true);
       }
@@ -62,7 +62,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (hydrated) window.localStorage.setItem("terra-cart", JSON.stringify(items));
+    if (hydrated) window.localStorage.setItem("luna-cart", JSON.stringify(items));
   }, [items, hydrated]);
 
   function addItem(product: Product, options: AddItemOptions = {}) {

@@ -49,7 +49,7 @@ export function SiteHeader() {
         <div className="search-panel">
           <form className="site-container search-form" action="/shop">
             <Search size={20} strokeWidth={1.6} aria-hidden="true" />
-            <label className="sr-only" htmlFor="site-search">Search Terra</label>
+            <label className="sr-only" htmlFor="site-search">Search Luna</label>
             <input id="site-search" name="q" placeholder="Search pots, plants and care guides" />
             <button type="button" className="icon-button" onClick={() => setSearchOpen(false)} aria-label="Close search">
               <X size={20} strokeWidth={1.6} />

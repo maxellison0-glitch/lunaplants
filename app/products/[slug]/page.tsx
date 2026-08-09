@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${product.name} with ${product.botanicalName}`,
     description: `${product.description} Made to order in the UK. From ${formatPrice(product.price)}.`,
-    openGraph: { title: `${product.name} | Terra`, description: product.description },
+    openGraph: { title: `${product.name} | Luna`, description: product.description },
   };
 }
 
@@ -31,7 +31,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     "@type": "Product",
     name: product.name,
     description: product.description,
-    brand: { "@type": "Brand", name: "Terra" },
+    brand: { "@type": "Brand", name: "Luna" },
     material: product.material,
     category: "Indoor plant pots with plants",
     offers: {
@@ -40,7 +40,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       price: product.price,
       availability: "https://schema.org/InStock",
       url: `https://lunaplants.co.uk/products/${product.slug}`,
-      seller: { "@type": "Organization", name: "Terra" },
+      seller: { "@type": "Organization", name: "Luna" },
     },
     aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "38" },
   };

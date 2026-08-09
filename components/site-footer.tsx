@@ -23,15 +23,15 @@ export function SiteFooter() {
         </div>
         <div className="footer-links">
           <div><h3>Shop</h3><Link href="/shop">All pairings</Link><Link href="/shop?room=Desk">Small spaces</Link><Link href="/shop?sort=gift">Gifts</Link></div>
-          <div><h3>Terra</h3><Link href="/about">Our story</Link><Link href="/journal">Journal</Link><Link href="/contact">Contact</Link></div>
+          <div><h3>Luna</h3><Link href="/about">Our story</Link><Link href="/journal">Journal</Link><Link href="/contact">Contact</Link></div>
           <div><h3>Help</h3><Link href="/contact#delivery">Delivery & returns</Link><Link href="/contact#care">Plant care</Link><Link href="/contact#faq">FAQs</Link></div>
         </div>
       </div>
       <div className="site-container footer-bottom">
-        <span>© {new Date().getFullYear()} Terra Studio Ltd.</span>
-        <div><Link href="/contact">Privacy</Link><Link href="/contact">Terms</Link><a href="https://www.instagram.com" aria-label="Terra on Instagram"><AtSign size={17} strokeWidth={1.4} /></a></div>
+        <span>© {new Date().getFullYear()} Luna Studio Ltd.</span>
+        <div><Link href="/contact">Privacy</Link><Link href="/contact">Terms</Link><a href="https://www.instagram.com" aria-label="Luna on Instagram"><AtSign size={17} strokeWidth={1.4} /></a></div>
       </div>
-      <div className="footer-wordmark" aria-hidden="true">TERRA</div>
+      <div className="footer-wordmark" aria-hidden="true">LUNA</div>
     </footer>
   );
 }

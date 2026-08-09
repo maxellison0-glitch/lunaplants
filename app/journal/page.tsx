@@ -5,13 +5,13 @@ import { journalPosts } from "@/lib/journal";
 
 export const metadata: Metadata = {
   title: "The Journal — plant care and design",
-  description: "Practical plant care, considered design notes and stories from the Terra 3D-printing studio.",
+  description: "Practical plant care, considered design notes and stories from the Luna 3D-printing studio.",
 };
 
 export default function JournalPage() {
   return (
     <main className="journal-page">
-      <header className="journal-hero"><div className="site-container"><span className="eyebrow">Notes on plants & making</span><h1>The Terra <em>journal.</em></h1><p>Useful ideas for greener rooms, better objects and living with both.</p></div></header>
+      <header className="journal-hero"><div className="site-container"><span className="eyebrow">Notes on plants & making</span><h1>The Luna <em>journal.</em></h1><p>Useful ideas for greener rooms, better objects and living with both.</p></div></header>
       <section className="section journal-listing"><div className="site-container"><div className="journal-featured">
         <Link className={`journal-featured-art journal-${journalPosts[0].tone}`} href={`/journal/${journalPosts[0].slug}`}><span>FIELD NOTE / 001</span><span className="journal-plant" aria-hidden="true" /></Link>
         <div><span className="eyebrow">{journalPosts[0].category} · {journalPosts[0].readTime}</span><h2><Link href={`/journal/${journalPosts[0].slug}`}>{journalPosts[0].title}</Link></h2><p>{journalPosts[0].excerpt}</p><Link className="text-link" href={`/journal/${journalPosts[0].slug}`}>Read the note <ArrowRight size={15} /></Link></div>

@@ -5,7 +5,7 @@ import { ShopCatalog } from "@/components/shop-catalog";
 
 export const metadata: Metadata = {
   title: "Shop plants with 3D-printed pots",
-  description: "Explore Terra's complete collection of houseplants paired with modern, made-to-order 3D-printed pots. UK delivery.",
+  description: "Explore Luna's complete collection of houseplants paired with modern, made-to-order 3D-printed pots. UK delivery.",
 };
 
 export default async function ShopPage({ searchParams }: { searchParams: Promise<{ q?: string; room?: string; collection?: string }> }) {

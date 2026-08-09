@@ -24,7 +24,7 @@ export function CheckoutForm() {
     return (
       <section className="order-confirmation">
         <span className="confirmation-mark"><Check size={34} strokeWidth={1.3} /></span>
-        <span className="eyebrow">Order TERRA-2608 confirmed</span>
+        <span className="eyebrow">Order LUNA-2608 confirmed</span>
         <h1>A new thing is <em>growing.</em></h1>
         <p>Thank you. We’ve received your order and reserved its place in the print queue. A confirmation will be sent to your email.</p>
         <div><span>Next step</span><strong>We print your pot</strong><small>Estimated dispatch in 3–5 working days</small></div>
@@ -40,7 +40,7 @@ export function CheckoutForm() {
         <header><span className="eyebrow">Secure checkout</span><h1>Almost <em>home.</em></h1></header>
         <section className="checkout-section">
           <div className="checkout-section-title"><span>01</span><div><h2>Contact</h2><p>For your order confirmation and delivery updates.</p></div></div>
-          <div className="form-grid"><label className="field full-field"><span>Email address</span><input required type="email" autoComplete="email" placeholder="you@example.com" /></label><label className="checkbox-field full-field"><input type="checkbox" /><span>Send me occasional Terra notes and new releases</span></label></div>
+          <div className="form-grid"><label className="field full-field"><span>Email address</span><input required type="email" autoComplete="email" placeholder="you@example.com" /></label><label className="checkbox-field full-field"><input type="checkbox" /><span>Send me occasional Luna notes and new releases</span></label></div>
         </section>
         <section className="checkout-section">
           <div className="checkout-section-title"><span>02</span><div><h2>Delivery</h2><p>UK mainland delivery in 2–3 days after dispatch.</p></div></div>
@@ -61,7 +61,7 @@ export function CheckoutForm() {
           </div>
         </section>
         <button className="button button-primary checkout-submit" type="submit" disabled={!items.length}><LockKeyhole size={16} /> {items.length ? `Place order · ${formatPrice(subtotal + delivery)}` : "Your bag is empty"}</button>
-        <p className="checkout-terms">By placing your order you agree to Terra’s terms and privacy policy. This demo checkout does not capture payment.</p>
+        <p className="checkout-terms">By placing your order you agree to Luna’s terms and privacy policy. This demo checkout does not capture payment.</p>
       </form>
 
       <aside className="checkout-summary">

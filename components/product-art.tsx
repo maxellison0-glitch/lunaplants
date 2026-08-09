@@ -19,7 +19,7 @@ export function ProductArt({
     <div
       className={`product-art palette-${palette} ${className}`}
       role="img"
-      aria-label={priorityLabel ?? "Plant in a sculptural Terra pot"}
+      aria-label={priorityLabel ?? "Plant in a sculptural Luna pot"}
       style={colour ? ({ "--selected-pot": colour } as React.CSSProperties) : undefined}
     >
       <span className="art-sun" aria-hidden="true" />
@@ -39,7 +39,7 @@ export function ProductArt({
       ) : (
         <span className={`pot pot-${shape}`} aria-hidden="true">
           <span className="pot-rim" />
-          <span className="pot-mark">t</span>
+          <span className="pot-mark">l</span>
         </span>
       )}
       <span className="art-shadow" aria-hidden="true" />

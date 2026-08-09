@@ -19,7 +19,7 @@ export function Newsletter({ compact = false }: { compact?: boolean }) {
     <form className={`newsletter-form ${compact ? "newsletter-compact" : ""}`} onSubmit={handleSubmit}>
       <label className="sr-only" htmlFor={compact ? "footer-email" : "newsletter-email"}>Email address</label>
       <input id={compact ? "footer-email" : "newsletter-email"} type="email" required placeholder="Email address" />
-      <button type="submit" aria-label="Join the Terra newsletter"><ArrowRight size={20} strokeWidth={1.5} /></button>
+      <button type="submit" aria-label="Join the Luna newsletter"><ArrowRight size={20} strokeWidth={1.5} /></button>
     </form>
   );
 }

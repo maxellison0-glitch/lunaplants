@@ -5,7 +5,7 @@ import { ProductArt } from "@/components/product-art";
 
 export const metadata: Metadata = {
   title: "Our story and process",
-  description: "Meet Terra: a UK studio pairing modern 3D-printed plant pots with characterful houseplants, made to order with less waste.",
+  description: "Meet Luna: a UK studio pairing modern 3D-printed plant pots with characterful houseplants, made to order with less waste.",
 };
 
 export default function AboutPage() {
@@ -13,8 +13,8 @@ export default function AboutPage() {
     <main className="about-page">
       <section className="about-hero">
         <div className="site-container about-hero-grid">
-          <div><span className="eyebrow">Our story / Est. 2026</span><h1>We make pots<br />for <em>living with.</em></h1><p>Terra sits where digital craft meets the unruly optimism of plants. We design the object and choose the living thing as one composition.</p></div>
-          <div className="about-hero-art"><ProductArt shape="ribbed" palette="moss" priorityLabel="Snake plant in a forest-green Terra Ribbed Cylinder" /><span>Form 03 / Ribbed Cylinder</span></div>
+          <div><span className="eyebrow">Our story / Est. 2026</span><h1>We make pots<br />for <em>living with.</em></h1><p>Luna sits where digital craft meets the unruly optimism of plants. We design the object and choose the living thing as one composition.</p></div>
+          <div className="about-hero-art"><ProductArt shape="ribbed" palette="moss" priorityLabel="Snake plant in a forest-green Luna Ribbed Cylinder" /><span>Form 03 / Ribbed Cylinder</span></div>
         </div>
       </section>
       <section className="manifesto-section">

@@ -11,14 +11,14 @@ import { TrustBar } from "@/components/trust-bar";
 export const metadata: Metadata = {
   title: "3D-printed plant pots, paired with plants",
   description:
-    "Shop modern 3D-printed plant pots with hand-selected indoor plants. Designed and made to order in the UK by Terra.",
+    "Shop modern 3D-printed plant pots with hand-selected indoor plants. Designed and made to order in the UK by Luna.",
 };
 
 export default function HomePage() {
   const organisationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Terra",
+    name: "Luna",
     url: "https://lunaplants.co.uk",
     description: "Modern 3D-printed pots paired with houseplants, made to order in the UK.",
     areaServed: "GB",
@@ -41,7 +41,7 @@ export default function HomePage() {
           </div>
           <div className="hero-visual">
             <div className="hero-visual-number" aria-hidden="true">01</div>
-            <ProductArt shape="wave" palette="clay" priorityLabel="Golden pothos in Terra's sculptural terracotta Wave Pot" />
+            <ProductArt shape="wave" palette="clay" priorityLabel="Golden pothos in Luna's sculptural terracotta Wave Pot" />
             <div className="hero-caption">
               <span>The Wave Pot</span>
               <span>Terracotta · PLA</span>
@@ -69,7 +69,7 @@ export default function HomePage() {
       <section className="section process-section">
         <div className="site-container process-layout">
           <div className="process-intro">
-            <span className="eyebrow eyebrow-light">How Terra works</span>
+            <span className="eyebrow eyebrow-light">How Luna works</span>
             <h2>Handcrafted by machine.<br /><em>Inspired by nature.</em></h2>
             <p>Digital precision meets the unpredictability of a living thing. We think that contrast makes both more beautiful.</p>
           </div>
@@ -106,7 +106,7 @@ export default function HomePage() {
         <div className="studio-copy-panel">
           <span className="eyebrow">Our point of view</span>
           <h2>Objects for living.<br />Made with <em>less waste.</em></h2>
-          <p>We started Terra because most plant pots are either mass-produced and forgettable, or beautiful but hard to live with. 3D printing gives us another path: considered forms, produced only when someone wants them.</p>
+          <p>We started Luna because most plant pots are either mass-produced and forgettable, or beautiful but hard to live with. 3D printing gives us another path: considered forms, produced only when someone wants them.</p>
           <ul>
             <li><Check size={16} /> Plant-based and durable materials</li>
             <li><Check size={16} /> No speculative overproduction</li>
@@ -127,7 +127,7 @@ export default function HomePage() {
       <section className="section journal-preview">
         <div className="site-container">
           <div className="section-heading compact-heading">
-            <div><span className="eyebrow">The Terra journal</span><h2>Things worth <em>growing.</em></h2></div>
+            <div><span className="eyebrow">The Luna journal</span><h2>Things worth <em>growing.</em></h2></div>
             <Link className="text-link" href="/journal">Read all stories <ArrowRight size={15} /></Link>
           </div>
           <div className="journal-grid">

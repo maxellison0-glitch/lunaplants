@@ -9,7 +9,7 @@ const promises = [
 
 export function TrustBar() {
   return (
-    <section className="trust-bar" aria-label="Why shop Terra">
+    <section className="trust-bar" aria-label="Why shop Luna">
       <div className="site-container trust-grid">
         {promises.map(({ icon: Icon, title, copy }) => (
           <div className="trust-item" key={title}>

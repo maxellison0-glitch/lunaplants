@@ -1,6 +1,6 @@
-# Terra storefront
+# Luna storefront
 
-The production frontend for Terra, a UK ecommerce brand pairing houseplants with made-to-order 3D-printed pots. The official domain is [lunaplants.co.uk](https://lunaplants.co.uk).
+The production frontend for Luna, a UK ecommerce brand pairing houseplants with made-to-order 3D-printed pots. The official domain is [lunaplants.co.uk](https://lunaplants.co.uk).
 
 ## Stack
 
