@@ -1,0 +1,58 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
+import { Check } from "lucide-react";
+import { useStore } from "@/components/store-provider";
+
+export function ReturnContent() {
+  const searchParams = useSearchParams();
+  const { clearCart } = useStore();
+  const [status, setStatus] = useState<string | null>(null);
+  const [email, setEmail] = useState<string | null>(null);
+
+  useEffect(() => {
+    const sessionId = searchParams.get("session_id");
+    if (!sessionId) return;
+
+    fetch(`/api/checkout/status?session_id=${sessionId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setStatus(data.status);
+        setEmail(data.customerEmail);
+        if (data.status === "complete") clearCart();
+      });
+  }, [searchParams, clearCart]);
+
+  if (status === "complete") {
+    return (
+      <section className="order-confirmation">
+        <span className="confirmation-mark"><Check size={34} strokeWidth={1.3} /></span>
+        <span className="eyebrow">Order confirmed</span>
+        <h1>A new thing is <em>growing.</em></h1>
+        <p>Thank you. We&apos;ve received your order and reserved its place in the print queue.{email && <> A confirmation has been sent to <strong>{email}</strong>.</>}</p>
+        <div><span>Next step</span><strong>We print your pot</strong><small>Estimated dispatch in 3–5 working days</small></div>
+        <Link className="button button-primary" href="/shop">Continue shopping</Link>
+      </section>
+    );
+  }
+
+  if (status === "open") {
+    return (
+      <section className="order-confirmation">
+        <span className="eyebrow">Payment incomplete</span>
+        <h1>Something went <em>wrong.</em></h1>
+        <p>Your payment wasn&apos;t completed. No charge has been made.</p>
+        <Link className="button button-primary" href="/checkout">Try again</Link>
+      </section>
+    );
+  }
+
+  return (
+    <section className="order-confirmation">
+      <span className="eyebrow">Processing</span>
+      <h1>One moment…</h1>
+    </section>
+  );
+}
