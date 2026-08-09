@@ -29,8 +29,13 @@ export default function CookiesPage() {
             <li><strong>Stripe</strong>: required for secure payment processing during checkout</li>
           </ul>
 
-          <h3>Analytics cookies</h3>
-          <p>We do not currently use analytics or advertising cookies. If we add them in the future, we will update this policy and provide a cookie consent mechanism before any non-essential cookies are set.</p>
+          <h3>Analytics and advertising cookies</h3>
+          <p>These cookies are only set if you accept non-essential cookies via the banner shown on your first visit. They help us understand how visitors use the site and measure the effectiveness of our advertising. You can change your preference at any time by clearing your browser cookies and revisiting the site.</p>
+          <ul>
+            <li><strong>Meta Pixel (Facebook/Instagram)</strong>: tracks page views, add-to-cart and purchase events to measure ad performance and build audiences. Set by facebook.net. See <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta&apos;s privacy policy</a></li>
+            <li><strong>TikTok Pixel</strong>: tracks page views and conversion events for TikTok advertising. Set by analytics.tiktok.com. See <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">TikTok&apos;s privacy policy</a></li>
+            <li><strong>Google Analytics / Google Ads</strong>: tracks site usage and conversion events for Google advertising. Set by googletagmanager.com. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google&apos;s privacy policy</a></li>
+          </ul>
         </section>
 
         <section>

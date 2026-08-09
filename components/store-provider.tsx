@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import type { Product } from "@/lib/catalog";
+import { trackAddToCart } from "@/lib/tracking";
 
 export type CartItem = {
   id: string;
@@ -95,6 +96,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       ];
     });
 
+    trackAddToCart({ name: product.name, price: size.price, quantity });
     if (options.openDrawer !== false) setDrawerOpen(true);
   }
 
