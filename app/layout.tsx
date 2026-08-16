@@ -3,9 +3,11 @@ import { Geist } from "next/font/google";
 import { headers } from "next/headers";
 import { AnnouncementBar } from "@/components/announcement-bar";
 import { CartDrawer } from "@/components/cart-drawer";
+import { CookieConsentProvider } from "@/components/cookie-consent";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { StoreProvider } from "@/components/store-provider";
+import { TrackingPixels } from "@/components/tracking-pixels";
 import "./globals.css";
 
 const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
@@ -49,11 +51,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en-GB">
       <body className={`${geist.variable} antialiased`}>
         <StoreProvider>
-          <AnnouncementBar />
-          <SiteHeader />
-          {children}
-          <SiteFooter />
-          <CartDrawer />
+          <CookieConsentProvider>
+            <TrackingPixels />
+            <AnnouncementBar />
+            <SiteHeader />
+            {children}
+            <SiteFooter />
+            <CartDrawer />
+          </CookieConsentProvider>
         </StoreProvider>
       </body>
     </html>

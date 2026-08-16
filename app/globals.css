@@ -476,6 +476,31 @@ img { max-width: 100%; }
   .drawer-item { grid-template-columns: 92px 1fr; }.drawer-header, .drawer-items, .drawer-footer { padding-left: 18px; padding-right: 18px; }
 }
 
+/* Cookie consent banner */
+.cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999; background: var(--ink); color: var(--cream); padding: 20px; }
+.cookie-banner-inner { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 24px; }
+.cookie-banner p { font-size: 14px; line-height: 1.6; margin: 0; flex: 1; }
+.cookie-banner-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-banner .button { font-size: 13px; padding: 10px 22px; border-radius: 0; }
+.cookie-banner .button-secondary { background: transparent; border: 1px solid var(--cream); color: var(--cream); }
+.cookie-banner .button-secondary:hover { background: rgba(255,255,255,0.1); }
+@media (max-width: 640px) { .cookie-banner-inner { flex-direction: column; text-align: center; } .cookie-banner-actions { width: 100%; } .cookie-banner .button { flex: 1; } }
+
+/* Legal / policy pages */
+.legal-page { padding: 60px 0 100px; }
+.legal-container { max-width: 720px; }
+.legal-container > .eyebrow { margin-bottom: 16px; }
+.legal-container > h1 { font-family: var(--font-display); font-size: 48px; font-weight: 400; font-style: italic; letter-spacing: -0.02em; margin-bottom: 8px; }
+.legal-updated { font-size: 14px; color: var(--muted); margin-bottom: 48px; }
+.legal-container section { margin-bottom: 40px; }
+.legal-container h2 { font-family: var(--font-sans); font-size: 18px; font-weight: 600; margin-bottom: 12px; letter-spacing: -0.01em; }
+.legal-container h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; margin: 20px 0 8px; }
+.legal-container p { font-size: 16px; line-height: 1.7; color: var(--ink); margin-bottom: 12px; }
+.legal-container ul, .legal-container ol { font-size: 16px; line-height: 1.7; padding-left: 24px; margin-bottom: 12px; }
+.legal-container li { margin-bottom: 6px; }
+.legal-container a { color: var(--clay); text-decoration: underline; text-underline-offset: 2px; }
+.legal-container a:hover { color: var(--clay-dark); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }

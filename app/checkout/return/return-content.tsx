@@ -1,16 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import { useStore } from "@/components/store-provider";
+import { trackPurchase } from "@/lib/tracking";
 
 export function ReturnContent() {
   const searchParams = useSearchParams();
   const { clearCart } = useStore();
   const [status, setStatus] = useState<string | null>(null);
   const [email, setEmail] = useState<string | null>(null);
+  const purchaseTracked = useRef(false);
 
   useEffect(() => {
     const sessionId = searchParams.get("session_id");
@@ -21,7 +23,13 @@ export function ReturnContent() {
       .then((data) => {
         setStatus(data.status);
         setEmail(data.customerEmail);
-        if (data.status === "complete") clearCart();
+        if (data.status === "complete") {
+          clearCart();
+          if (!purchaseTracked.current) {
+            purchaseTracked.current = true;
+            trackPurchase(data.amountTotal ?? 0, sessionId);
+          }
+        }
       });
   }, [searchParams, clearCart]);
 

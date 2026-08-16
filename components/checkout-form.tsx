@@ -1,16 +1,25 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { EmbeddedCheckoutProvider, EmbeddedCheckout } from "@stripe/react-stripe-js";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { useStore } from "./store-provider";
+import { trackBeginCheckout } from "@/lib/tracking";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!);
 
 export function CheckoutForm() {
-  const { items } = useStore();
+  const { items, subtotal } = useStore();
+  const tracked = useRef(false);
+
+  useEffect(() => {
+    if (items.length && !tracked.current) {
+      tracked.current = true;
+      trackBeginCheckout(subtotal, items.map((i) => ({ name: i.name, price: i.price, quantity: i.quantity })));
+    }
+  }, [items, subtotal]);
 
   const fetchClientSecret = useCallback(async () => {
     const response = await fetch("/api/checkout", {

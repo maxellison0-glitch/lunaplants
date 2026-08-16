@@ -4,7 +4,7 @@ import { journalPosts } from "@/lib/journal";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://lunaplants.co.uk";
-  const staticRoutes = ["", "/shop", "/about", "/contact", "/journal"].map((path) => ({
+  const staticRoutes = ["", "/shop", "/about", "/contact", "/journal", "/terms", "/privacy", "/delivery", "/returns", "/cookies"].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date("2026-08-09"),
     changeFrequency: path === "" || path === "/shop" ? ("weekly" as const) : ("monthly" as const),

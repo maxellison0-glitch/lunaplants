@@ -15,5 +15,6 @@ export async function GET(request: NextRequest) {
   return NextResponse.json({
     status: session.status,
     customerEmail: session.customer_details?.email,
+    amountTotal: session.amount_total ? session.amount_total / 100 : null,
   });
 }
